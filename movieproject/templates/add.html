@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+</head>
+{% extends 'base.html' %}
+{% block body %}
+<body>
+<form method="POST" enctype="multipart/form-data" >
+  {% csrf_token %}
+  <label> Movie name:</label><input type="text" name="name" placeholder="Enter the movie name"><br>
+  <label> Description:</label><input type="text" name="desc" placeholder="Enter the movie description"><br>
+  <label> Release year:</label><input type="text" name="year" placeholder="Enter the release year"><br>
+  <label> Select:</label><input type="file" name="img" ><br>
+    <input type="submit">
+
+
+
+
+</form>
+{% endblock %}
+</body>
+</html>
